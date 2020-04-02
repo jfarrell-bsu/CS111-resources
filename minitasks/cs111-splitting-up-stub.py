@@ -1,20 +1,17 @@
-# 
 # Author:
 # Date:
 # Description:
-#
 
-#
 # Single string containing CSV formatted song data
 #  "artist,album,title,duration"
 #  Note: Duration is specified in seconds
 #
-singleSongCSV = "Jimmy Buffett,Songs You Know by Heart,Cheeseburger in Paradise,172"
+single_song = "Jimmy Buffett,Songs You Know by Heart,Cheeseburger in Paradise,172"
 
 #
 # List of strings containing CSV formatted song data
 #
-songList = ['Jimmy Buffett,Songs You Know by Heart,Cheeseburger in Paradise,172', 
+songs = ['Jimmy Buffett,Songs You Know by Heart,Cheeseburger in Paradise,172', 
             'Jimmy Buffett,Songs You Know by Heart,He Went to Paris,209',
             'Jimmy Buffett,Songs You Know by Heart,Fins,205',
             'Jimmy Buffett,Songs You Know by Heart,Son of a Son of a Sailor,205',
@@ -28,26 +25,17 @@ songList = ['Jimmy Buffett,Songs You Know by Heart,Cheeseburger in Paradise,172'
             'Jimmy Buffett,Songs You Know by Heart,Boat Drinks,157',
             'Jimmy Buffett,Songs You Know by Heart,Volcano,218']
 
-# Display nicely formatted song details for a
-#   string provided in the following format:
-#   "Artist,Album,Title,Duration"
-#
-# Parameters
-#   song - String containing comma separated song details
-#
-# Return
-#   none
-def printSong(song):
- 
+def print_song(song):
+    """Displays a nicely formatted song details for a string provided in the following format: Artist,Album,Title,Duration"""
+    pass
 
+def print_songs(song_list):
+    pass
 
+def read_songs(data_file):
+    return ""
 
-#
-# call printSong() to print singleSongCSV
-#
-
-
-
-#
-# use a for loop and printSong() to print each song in songList
-#
+print_song(single_song)
+print_songs(songs)
+file_songs = read_songs('music_collection.csv')
+print_songs(file_songs)

@@ -6,22 +6,25 @@
 
 
 #
-# This is a single player game where the player has five attempts to randomly
-#   select three items and match all three.  If the player draws three matching
-#   items, then the game is over and the player wins.  If the completes five
-#   attempts without drawing a match, the game is over and the player loses.
-#
-# Parameters
-#   name - Name of the current player
-#
-# Returns
-#   True - Player Wins
-#   False - Player Loses
-def playGameOfSlots(name):
 
+def play_slots_game(name):
+    """
+    This is a single player game where the player has five attempts to randomly
+    select three items and match all three.  If the player draws three matching
+    items, then the game is over and the player wins.  If the completes five
+    attempts without drawing a match, the game is over and the player loses.
+
+    Parameters
+    name - Name of the current player
+
+    Returns
+        True - Player Wins
+        False - Player Loses
+    """
+    print(f"Welcome to the slots game {name}") 
     # Create List of Game Symbols (unicode characters)
     # Actual slot machines have 20 symbols per wheel
-    symbolList = ["Cherry", "Lemon", "Seven", "Diamond", "Heart"]
+    symbols = ["Cherry", "Lemon", "Seven", "Diamond", "Heart"]
     
     # Step 2: The game should begin by displaying a welcome message including the
     #    name of the game (Slots) and the players name.
@@ -60,7 +63,7 @@ def playGameOfSlots(name):
 
 
     # Step 12: Return whether the player has won
-
+    return False
 
    
 
@@ -70,24 +73,24 @@ def playGameOfSlots(name):
 #   what is being done with the return value, but you do not need    #
 #   to modify this code to complete the component.                   #
 ######################################################################             
+if __name__ == "__main__":
+                
+    # Setup a default player
+    player_name = "Bob"
+
+    # Call the function and store the result
+    player_won = play_slots_game(player_name)
+
+    # Display the winner!
+    if player_won:
+        winner_message = f"*  {player_name}  Wins!  *"
+    else:
+        winner_message = "*  computer Wins!  *"
         
-# Setup a default player
-playerName = "Bob"
-
-# Call the function and store the result
-playerWins = playGameOfSlots(playerName)
-
-# Display the winner!
-if playerWins == True:
-    winnerString = "*  " + playerName + " Wins!  *"
-else:
-    winnerString = "*  Computer Wins!  *"
-    
-starBorder = "*" * len(winnerString)
-print(starBorder)
-print(winnerString)
-print(starBorder)
-    
+    star_border = "*" * len(winner_message)
+    print(star_border)
+    print(winner_message)
+    print(star_border)
     
 
     

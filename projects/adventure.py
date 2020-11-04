@@ -6,21 +6,14 @@
 import random
 
 # Step 2: Copy your generateMadlib() function from Madlib MiniTask and past it here
-
-
-#
-# The createMadlib() function allows us to demonstrate code-reuse by utilizing
-#   the generateMadlib() function we wrote in class.  This function displays
-#   a welcome message to the player, prompts them, generates the madlib and 
-#   prints it.
-#
-# Parameters
-#   name - Name of the current player
-#
-# Returns
-#   nothing
-def createMadlib(name):
-
+def create_adventure(name):
+    """
+    This is a choose your own adventure game.
+    Create a story where you prompt the user for options that change the story.
+    You should have many different paths through your story, but try to avoid going 
+    too far as it becomes difficult to manage.
+    """
+    print(f"Welcome to choose your own adventure {name}") 
     # Step 3: The game should begin by displaying a welcome message including the
     #    name of the game (Madlib) and the players name.
 
@@ -41,13 +34,13 @@ def createMadlib(name):
 #   what is being done with the return value, but you do not need    #
 #   to modify this code to complete the component.                   #
 ######################################################################             
-        
-# Setup a default player
-playerName = "Bob"
+if __name__ == "__main__":            
+    # Setup a default player
+    player_name = "Bob"
 
-# Call the function to create a Madlib
-createMadlib(playerName)
-   
+    # Call the function to create a Madlib
+    create_adventure(player_name)
+    
     
 
     

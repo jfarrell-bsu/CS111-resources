@@ -4,7 +4,9 @@
 
 # Step 1: Import required libraries
 import random
-
+from adventure import create_adventure
+from dice_game import play_dice_game
+from slots import play_slots_game
 # Step 2:  Copy the playGameOfDice() function from Component 1 and paste it here
 
 
@@ -13,20 +15,21 @@ import random
 
 # Step 4:  Copy both the generateMadlib() and createMadlib() functions from Component 3 and paste them here
 
-
-#
-# Display the winner for the current game
-#
-# Parameter
-#  name - The name of the winner
-#
-def displayWinner(name):
+def display_winner(name):
+    """
+    #
+    # Display the winner for the current game
+    #
+    # Parameter
+    #  name - The name of the winner
+    #
+    """
     # Display the winner!
-    winnerString = "*  " + name + " Wins!  *"
-    starBorder = "*" * len(winnerString)
-    print(starBorder)
-    print(winnerString)
-    print(starBorder)
+    message = "*  " + name + " Wins!  *"
+    star_border = "*" * len(message)
+    print(star_border)
+    print(message)
+    print(star_border)
 
 
 #
@@ -67,14 +70,20 @@ def displayWinner(name):
     #    player's selection from the menu and add or subtract the appropriate amount 
     #    of credits from the players balance.  For the Dice and Slots games, check the
     #    return value and if the player wins (return value == True), use the provided 
-    #    displayWinner() function to print the player's name.  If the computer wins
-    #    (return value == False), use the displayerWinner() function to print "Computer".
+    #    display_winner() function to print the player's name.  If the computer wins
+    #    (return value == False), use the display_winner() function to print "Computer".
     #    End the game if the user selects (Q)uit
 
    
 
 # Step 9: Game Over. Print a nice message thanking the user for playing.
 
+
+if __name__ == "__main__":
+    name = input("what is your name? ")
+    play_dice_game(name)
+    play_slots_game(name)
+    create_adventure(name)
 
 
 
